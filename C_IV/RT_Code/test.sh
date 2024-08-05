@@ -5,14 +5,14 @@
 # Initial working directory:
 #SBATCH -D ./
 # Job Name:
-#SBATCH -J RT_Simulation
+#SBATCH -J RT_simulation_Jin
 #
 # Number of nodes and MPI tasks per node:
 #SBATCH --nodes=4
 #SBATCH --ntasks-per-node=40
 #
 #SBATCH --mail-type=none
-#SBATCH --mail-user=jinlim@gmail.com
+#SBATCH --mail-user=jinlim.ast@gmail.com
 #
 # Wall clock limit:
 #SBATCH --time=24:00:00
@@ -23,7 +23,4 @@ module purge
 module load intel/19.1.3 impi/2019.9
 
 # Run the program:
-srun ./sim_test.out > prog_test.out
-
-mpiifort -cpp -DMPI -c *_mod.f90
-mpiifort -cpp -DMPI -o CIV.out main_outflow.f90 *.o
+srun ./CIV.out > prog_test.out
