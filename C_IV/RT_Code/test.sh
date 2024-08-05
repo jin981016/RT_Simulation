@@ -5,7 +5,7 @@
 # Initial working directory:
 #SBATCH -D ./
 # Job Name:
-#SBATCH -J RT_bipolar
+#SBATCH -J RT_Simulation
 #
 # Number of nodes and MPI tasks per node:
 #SBATCH --nodes=4
