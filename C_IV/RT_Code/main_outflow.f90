@@ -20,7 +20,7 @@ implicit none
 integer, parameter :: nphoton_emit = 1.0e5
 integer :: nphoton_flat
 !	MAIN
-integer, parameter :: nN_atom = 7, nv_exp = 32, nv_ran = 2, ntau_d = 16
+integer, parameter :: nN_atom = 35, nv_exp = 32, nv_ran = 8, ntau_d = 16
 real(kind=rkd) :: N_atom(nN_atom), v_exp(nv_exp), v_ran(nv_ran), tau_d(ntau_d+1)
 real(kind=rkd) :: N_atom_min, N_atom_max, dN_atom
 real(kind=rkd) :: tau_d_min, tau_d_max, dtau_d
