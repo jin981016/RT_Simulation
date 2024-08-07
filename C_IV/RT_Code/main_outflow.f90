@@ -234,10 +234,10 @@ v_emit(29)  = 700.d5	! cm/s
 itau_d = 1
 
 
-do iv_emit = 1,2
-do iv_ran = 1, 2
-do iv_exp = 1,2
-do iN_atom = 1,2
+do iv_emit = 1,29
+do iv_ran = 1, 29
+do iv_exp = 1,29
+do iN_atom = 1,30
 
 
 
