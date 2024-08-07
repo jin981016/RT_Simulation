@@ -17,10 +17,10 @@ use clumpy_RT_mod
 use dust_mod
 implicit none
 
-integer, parameter :: nphoton_emit = 1.0e5
+integer, parameter :: nphoton_emit = 1.0e7
 integer :: nphoton_flat
 !	MAIN
-integer, parameter :: nN_atom = 35, nv_exp = 32, nv_ran = 8, ntau_d = 16
+integer, parameter :: nN_atom = 35, nv_exp = 32, nv_ran = 30, ntau_d = 16
 real(kind=rkd) :: N_atom(nN_atom), v_exp(nv_exp), v_ran(nv_ran), tau_d(ntau_d+1)
 real(kind=rkd) :: N_atom_min, N_atom_max, dN_atom
 real(kind=rkd) :: tau_d_min, tau_d_max, dtau_d
@@ -85,11 +85,34 @@ atom = C_IV
 
  
 v_ran(1) = sqrt(2.d0*k*1.e5/atom%mass)
-v_ran(2) = 50.d5
-v_ran(3) = 100.d5
-v_ran(4) = 150.d5
-v_ran(5) = 200.d5
-
+v_ran(2) = 25.d5
+v_ran(3) = 50.d5
+v_ran(4) = 75.d5
+v_ran(5) = 100.d5
+v_ran(6) = 125.d5
+v_ran(7) = 150.d5
+v_ran(8) = 175.d5
+v_ran(9) = 200.d5
+v_ran(10) = 225.d5
+v_ran(11) = 250.d5
+v_ran(12) = 275.d5
+v_ran(13) = 300.d5
+v_ran(14) = 325.d5
+v_ran(15) = 350.d5
+v_ran(16) = 375.d5
+v_ran(17) = 400.d5
+v_ran(18) = 425.d5
+v_ran(19) = 450.d5
+v_ran(20) = 475.d5
+v_ran(21) = 500.d5
+v_ran(22) = 525.d5
+v_ran(23) = 550.d5
+v_ran(24) = 575.d5
+v_ran(25) = 600.d5
+v_ran(26) = 625.d5
+v_ran(27) = 650.d5
+v_ran(28) = 675.d5
+v_ran(29) = 700.d5
 
 iv_ran = 1
 
@@ -97,36 +120,35 @@ tau_D(1) = 0.d0
 
 
 v_exp(1)  = 0.d5	! cm/s
-v_exp(2)  = 20.d5
-v_exp(3)  = 40.d5	! cm/s
-v_exp(4)  = 60.d5	! cm/s
-v_exp(5)  = 80.d5	! cm/s
-v_exp(6)  = 100.d5	! cm/s
-v_exp(7)  = 120.d5
-v_exp(8)  = 140.d5	! cm/s
-v_exp(9)  = 160.d5	! cm/s
-v_exp(10)  = 180.d5	! cm/s
-v_exp(11)  = 200.d5	! cm/s
-v_exp(12)  = 220.d5
-v_exp(13)  = 240.d5	! cm/s
-v_exp(14)  = 260.d5	! cm/s
-v_exp(15)  = 280.d5	! cm/s
-v_exp(16)  = 300.d5	! cm/s
-v_exp(17)  = 320.d5
-v_exp(18)  = 340.d5	! cm/s
-v_exp(19)  = 360.d5	! cm/s
-v_exp(20)  = 380.d5	! cm/s
-v_exp(21)  = 400.d5	! cm/s
-v_exp(22)  = 420.d5
-v_exp(23)  = 440.d5	! cm/s
-v_exp(24)  = 460.d5	! cm/s
-v_exp(25)  = 480.d5	! cm/s
-v_exp(26)  = 500.d5	! cm/s
-v_exp(27)  = 520.d5
-v_exp(28)  = 540.d5	! cm/s
-v_exp(29)  = 560.d5	! cm/s
-v_exp(30)  = 580.d5	! cm/s
-v_exp(31)  = 600.d5	! cm/s
+v_exp(2)  = 25.d5
+v_exp(3)  = 50.d5	! cm/s
+v_exp(4)  = 75.d5	! cm/s
+v_exp(5)  = 100.d5	! cm/s
+v_exp(6)  = 125.d5	! cm/s
+v_exp(7)  = 150.d5
+v_exp(8)  = 175.d5	! cm/s
+v_exp(9)  = 200.d5	! cm/s
+v_exp(10)  = 225.d5	! cm/s
+v_exp(11)  = 250.d5	! cm/s
+v_exp(12)  = 275.d5
+v_exp(13)  = 300.d5	! cm/s
+v_exp(14)  = 325.d5	! cm/s
+v_exp(15)  = 350.d5	! cm/s
+v_exp(16)  = 375.d5	! cm/s
+v_exp(17)  = 400.d5
+v_exp(18)  = 425.d5	! cm/s
+v_exp(19)  = 450.d5	! cm/s
+v_exp(20)  = 475.d5	! cm/s
+v_exp(21)  = 500.d5	! cm/s
+v_exp(22)  = 525.d5
+v_exp(23)  = 550.d5	! cm/s
+v_exp(24)  = 575.d5	! cm/s
+v_exp(25)  = 600.d5	! cm/s
+v_exp(26)  = 625.d5	! cm/s
+v_exp(27)  = 650.d5
+v_exp(28)  = 675.d5	! cm/s
+v_exp(29)  = 700.d5	! cm/s
+
 
 
 
@@ -140,25 +162,13 @@ v_exp(31)  = 600.d5	! cm/s
 !r_cl(1) = 1d-3	! ratio r_cl/R_H
 !ir_cl = 1
 
-!N_atom(1) = 1.3d12	! cm^-2
-!N_atom(2) = 2.d12	! cm^-2
-!N_atom(3) = 3.2d12	! cm^-2
-!N_atom(4) = 5.d12	! cm^-2
-!N_atom(5) = 7.9d12	! cm^-2
+N_atom(1) = 1.3d12	! cm^-2
+N_atom(2) = 2.d12	! cm^-2
+N_atom(3) = 3.2d12	! cm^-2
+N_atom(4) = 5.d12	! cm^-2
+N_atom(5) = 7.9d12	! cm^-2
 
-
-
-N_atom(1) = 3.2d12	! cm^-2
-N_atom(2) = 3.2d13	! cm^-2
-N_atom(3) = 3.2d14	! cm^-2
-N_atom(4) = 3.2d15	! cm^-2
-N_atom(5) = 3.2d16	! cm^-2
-N_atom(6) = 3.2d17	! cm^-2
-
-
-
-
-!N_atom(6) = 1.3d14	! cm^-2
+N_atom(6) = 1.3d14	! cm^-2
 N_atom(7) = 2.d14	! cm^-2
 N_atom(8) = 3.2d14	! cm^-2
 N_atom(9) = 5.d14	! cm^-2
@@ -182,62 +192,58 @@ N_atom(23) = 3.2d17	! cm^-2
 N_atom(24) = 5.d17	! cm^-2
 N_atom(25) = 7.9d17	! cm^-2
 
-
-!N_atom(7) = 3.2d19	! cm^-2
-
-!N_atom(21) = 1.3d17	! cm^-2
-!N_atom(22) = 2.d17	! cm^-2
-!N_atom(24) = 5.d17	! cm^-2
-!N_atom(25) = 7.9d17	! cm^-2
+N_atom(26) = 1.3d18	! cm^-2
+N_atom(27) = 2.d18	! cm^-2
+N_atom(28) = 3.2d18	! cm^-2
+N_atom(29) = 5.d18	! cm^-2
+N_atom(30) = 7.9d18	! cm^-2
 
 
 v_emit(1)  = 1.d5	! cm/s
-v_emit(2)  = 20.d5
-v_emit(3)  = 40.d5	! cm/s
-v_emit(4)  = 60.d5	! cm/s
-v_emit(5)  = 80.d5	! cm/s
-v_emit(6)  = 100.d5	! cm/s
-v_emit(7)  = 120.d5
-v_emit(8)  = 140.d5	! cm/s
-v_emit(9)  = 160.d5	! cm/s
-v_emit(10)  = 180.d5	! cm/s
-v_emit(11)  = 200.d5	! cm/s
-v_emit(12)  = 220.d5
-v_emit(13)  = 240.d5	! cm/s
-v_emit(14)  = 260.d5	! cm/s
-v_emit(15)  = 280.d5	! cm/s
-v_emit(16)  = 300.d5	! cm/s
-v_emit(17)  = 320.d5
-v_emit(18)  = 340.d5	! cm/s
-v_emit(19)  = 360.d5	! cm/s
-v_emit(20)  = 380.d5	! cm/s
-v_emit(21)  = 400.d5	! cm/s
-v_emit(22)  = 420.d5
-v_emit(23)  = 440.d5	! cm/s
-v_emit(24)  = 460.d5	! cm/s
-v_emit(25)  = 480.d5	! cm/s
-v_emit(26)  = 500.d5	! cm/s
-v_emit(27)  = 520.d5
-v_emit(28)  = 540.d5	! cm/s
-v_emit(29)  = 560.d5	! cm/s
-v_emit(30)  = 580.d5	! cm/s
-v_emit(31)  = 600.d5	! cm/s
+v_emit(2)  = 25.d5
+v_emit(3)  = 50.d5	! cm/s
+v_emit(4)  = 75.d5	! cm/s
+v_emit(5)  = 100.d5	! cm/s
+v_emit(6)  = 125.d5	! cm/s
+v_emit(7)  = 150.d5
+v_emit(8)  = 175.d5	! cm/s
+v_emit(9)  = 200.d5	! cm/s
+v_emit(10)  = 225.d5	! cm/s
+v_emit(11)  = 250.d5	! cm/s
+v_emit(12)  = 275.d5
+v_emit(13)  = 300.d5	! cm/s
+v_emit(14)  = 325.d5	! cm/s
+v_emit(15)  = 350.d5	! cm/s
+v_emit(16)  = 375.d5	! cm/s
+v_emit(17)  = 400.d5
+v_emit(18)  = 425.d5	! cm/s
+v_emit(19)  = 450.d5	! cm/s
+v_emit(20)  = 475.d5	! cm/s
+v_emit(21)  = 500.d5	! cm/s
+v_emit(22)  = 525.d5
+v_emit(23)  = 550.d5	! cm/s
+v_emit(24)  = 575.d5	! cm/s
+v_emit(25)  = 600.d5	! cm/s
+v_emit(26)  = 625.d5	! cm/s
+v_emit(27)  = 650.d5
+v_emit(28)  = 675.d5	! cm/s
+v_emit(29)  = 700.d5	! cm/s
 
 
 
 itau_d = 1
 
 
-do iv_emit = 1,5 !16,31
-do iv_ran = 1,1
-do iv_exp = 1,5 ! 16, 31
-do iN_atom = 1,1
+do iv_emit = 1,29
+do iv_ran = 1, 29
+do iv_exp = 1,29
+do iN_atom = 1,30
 
 
 
 call set_escape_observer()
 call set_dust('dust_data/MW_C_IV.dat')
-	write(fn_model,100) 'data_vel/N_atom',N_atom(iN_atom), &
+	write(fn_model,100) 'data_out/N_atom',N_atom(iN_atom), &
 					'_Vexp', v_exp(iv_exp)/1e5, &
 					'_Vemit', v_emit(iv_emit)/1e5, &
 					'_tauD', tau_d(itau_d), &
