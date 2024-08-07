@@ -1,7 +1,7 @@
 #!/bin/bash -l                                                                            
 # Standard output and error:
-#SBATCH -o ./tjob.out.%j
-#SBATCH -e ./tjob.err.%j
+#SBATCH -o ./jin_test.out.%j
+#SBATCH -e ./jin_test.err.%j
 # Initial working directory:
 #SBATCH -D ./
 # Job Name:
@@ -23,4 +23,4 @@ module purge
 module load intel/19.1.3 impi/2019.9
 
 # Run the program:
-srun ./CIV.out > prog_test.out
+srun ./CIV.out > test_1.out
