@@ -1,14 +1,14 @@
 #!/bin/bash -l                                                                            
 # Standard output and error:
-#SBATCH -o ./jin_CIV.out
-#SBATCH -e ./jin_CIV.err
+#SBATCH -o ./jin_CIV.out.%j
+#SBATCH -e ./jin_CIV.err.%j
 # Initial working directory:
 #SBATCH -D ./
 # Job Name:
 #SBATCH -J RT_simulation_Jin
 #
 # Number of nodes and MPI tasks per node:
-#SBATCH --nodes=4
+#SBATCH --nodes=6
 #SBATCH --ntasks-per-node=40
 #
 #SBATCH --mail-type=none
@@ -23,6 +23,6 @@ module purge
 module load intel/19.1.3 impi/2019.9
 
 # Run the program:
-srun ./CIV.out > sim_CIV.out
+srun ./CIV.out > sim_CIV_2.out
 
 
