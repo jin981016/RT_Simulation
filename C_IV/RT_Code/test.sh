@@ -23,6 +23,6 @@ module purge
 module load intel/19.1.3 impi/2019.9
 
 # Run the program:
-srun ./CIV.out > sim_CIV_2.out
+srun ./CIV.out > sim_CIV_12.out
 
 

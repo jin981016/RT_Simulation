@@ -20,7 +20,7 @@ implicit none
 integer, parameter :: nphoton_emit = 1.0e7
 integer :: nphoton_flat
 !	MAIN
-integer, parameter :: nN_atom = 30, nv_exp = 16, nv_ran = 16, ntau_d = 16
+integer, parameter :: nN_atom = 32, nv_exp = 16, nv_ran = 16, ntau_d = 16
 real(kind=rkd) :: N_atom(nN_atom), v_exp(nv_exp), v_ran(nv_ran), tau_d(ntau_d+1)
 real(kind=rkd) :: N_atom_min, N_atom_max, dN_atom
 real(kind=rkd) :: tau_d_min, tau_d_max, dtau_d
@@ -140,29 +140,37 @@ N_atom(3) = 3.2d12	! cm^-2
 N_atom(4) = 5.d12	! cm^-2
 N_atom(5) = 7.9d12	! cm^-2
 
-N_atom(6) = 1.3d14	! cm^-2
-N_atom(7) = 2.d14	! cm^-2
-N_atom(8) = 3.2d14	! cm^-2
-N_atom(9) = 5.d14	! cm^-2
-N_atom(10) = 7.9d14	! cm^-2
 
-N_atom(11) = 1.3d15	! cm^-2
-N_atom(12) = 2.d15	! cm^-2
-N_atom(13) = 3.2d15	! cm^-2
-N_atom(14) = 5.d15	! cm^-2
-N_atom(15) = 7.9d15	! cm^-2
+N_atom(6) = 1.3d13      ! cm^-2
+N_atom(7) = 2.d13      ! cm^-2
+N_atom(8) = 3.2d13      ! cm^-2
+N_atom(9) = 5.d13       ! cm^-2
+N_atom(10) = 7.9d13      ! cm^-2
 
-N_atom(16) = 1.3d16	! cm^-2
-N_atom(17) = 2.d16	! cm^-2
-N_atom(18) = 3.2d16	! cm^-2
-N_atom(19) = 5.d16	! cm^-2
-N_atom(20) = 7.9d16	! cm^-2
 
-N_atom(21) = 1.3d17	! cm^-2
-N_atom(22) = 2.d17	! cm^-2
-N_atom(23) = 3.2d17	! cm^-2
-N_atom(24) = 5.d17	! cm^-2
-N_atom(25) = 7.9d17	! cm^-2
+N_atom(11) = 1.3d14	! cm^-2
+N_atom(12) = 2.d14	! cm^-2
+N_atom(13) = 3.2d14	! cm^-2
+N_atom(14) = 5.d14	! cm^-2
+N_atom(15) = 7.9d14	! cm^-2
+
+N_atom(16) = 1.3d15	! cm^-2
+N_atom(17) = 2.d15	! cm^-2
+N_atom(18) = 3.2d15	! cm^-2
+N_atom(19) = 5.d15	! cm^-2
+N_atom(20) = 7.9d15	! cm^-2
+
+N_atom(21) = 1.3d16	! cm^-2
+N_atom(22) = 2.d16	! cm^-2
+N_atom(23) = 3.2d16	! cm^-2
+N_atom(24) = 5.d16	! cm^-2
+N_atom(25) = 7.9d16	! cm^-2
+
+N_atom(26) = 1.3d17	! cm^-2
+N_atom(27) = 2.d17	! cm^-2
+N_atom(28) = 3.2d17	! cm^-2
+N_atom(29) = 5.d17	! cm^-2
+N_atom(30) = 7.9d17	! cm^-2
 
 
 v_emit(1)  = 1.d5	! cm/s
@@ -189,13 +197,13 @@ itau_d = 1
 do iv_emit = 1,15
 do iv_ran = 1,15
 do iv_exp = 1,15
-do iN_atom = 21,25
+do iN_atom = 27,27
 
 
 
 call set_escape_observer()
 call set_dust('dust_data/MW_C_IV.dat')
-	write(fn_model,100) 'data_jin/N_atom',N_atom(iN_atom), &
+	write(fn_model,100) 'data_add/N_atom',N_atom(iN_atom), &
 					'_Vexp', v_exp(iv_exp)/1e5, &
 					'_Vemit', v_emit(iv_emit)/1e5, &
 					'_tauD', tau_d(itau_d), &
