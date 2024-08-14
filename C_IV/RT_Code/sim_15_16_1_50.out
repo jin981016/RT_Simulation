@@ -8556,3 +8556,82 @@
  Done
  TIME :   0.751596882939339       sec
           50 %           6   7.52439150214195     
+ 	 100 %          87   14.2273709923029     
+ Time :   14.4340495020151     
+ data_15_16_1_50/N_atom200E+16_Vexp500E+01_Vemit350E+02_tauD000E+00_Vran250E+02 
+                      
+ Start
+ set_grid_done
+ set_clumps_done
+ Done
+ TIME :   0.756228476762772       sec
+          50 %         136   8.99379548430443     
+ 	 100 %         128   17.0973466187716     
+ Time :   17.3037262260914     
+ data_15_16_1_50/N_atom320E+16_Vexp500E+01_Vemit350E+02_tauD000E+00_Vran250E+02 
+                      
+ Start
+ set_grid_done
+ set_clumps_done
+ Done
+ TIME :   0.752741143107414       sec
+          50 %          95   10.9116951376200     
+ 	 100 %          77   20.9937553405762     
+ Time :   21.1920122802258     
+ data_15_16_1_50/N_atom500E+16_Vexp500E+01_Vemit350E+02_tauD000E+00_Vran250E+02 
+                      
+ Start
+ set_grid_done
+ set_clumps_done
+ Done
+ TIME :   0.751595407724380       sec
+          50 %          63   13.4091561734676     
+ 	 100 %         113   25.9843023419380     
+ Time :   26.3132462054491     
+ data_15_16_1_50/N_atom790E+16_Vexp500E+01_Vemit350E+02_tauD000E+00_Vran250E+02 
+                      
+ Start
+ set_grid_done
+ set_clumps_done
+ Done
+ TIME :   0.881800755858421       sec
+          50 %          95   17.2810810804367     
+ 	 100 %         135   33.7593980580568     
+ Time :   33.9536902010441     
+ data_15_16_1_50/N_atom130E+15_Vexp150E+02_Vemit350E+02_tauD000E+00_Vran250E+02 
+                      
+ Start
+ set_grid_done
+ set_clumps_done
+ Done
+ TIME :   0.752806439995766       sec
+          50 %           6   3.69232228398323     
+ 	 100 %         125   6.57288011908531     
+ Time :   6.77278794348240     
+ data_15_16_1_50/N_atom200E+15_Vexp150E+02_Vemit350E+02_tauD000E+00_Vran250E+02 
+                      
+ Start
+ set_grid_done
+ set_clumps_done
+ Done
+ TIME :   0.753069177269936       sec
+          50 %         133   3.91900913417339     
+ 	 100 %          52   7.00573354959488     
+ Time :   7.20218448340893     
+ data_15_16_1_50/N_atom320E+15_Vexp150E+02_Vemit350E+02_tauD000E+00_Vran250E+02 
+                      
+ Start
+ set_grid_done
+ set_clumps_done
+ Done
+ TIME :   0.752387806773186       sec
+          50 %          90   4.42510832846165     
+ 	 100 %          34   8.03012070059776     
+ Time :   8.22942489385605     
+ data_15_16_1_50/N_atom500E+15_Vexp150E+02_Vemit350E+02_tauD000E+00_Vran250E+02 
+                      
+ Start
+ set_grid_done
+ set_clumps_done
+ Done
+ TIME :   0.751860156655312       sec
